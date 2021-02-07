@@ -22,27 +22,27 @@ public class Book {
 
     public Book(String titles, String authors, String ISBN, int publicationYear, int pages,
                 double price) {
-        this(titles, authors, ISBN, publicationYear, pages, "", price);
+        this(titles, authors, ISBN, publicationYear, pages, null, price);
     }
 
     public Book(String titles, String authors, double price) {
-        this(titles, authors, "", 0, 0, price);
+        this(titles, authors, null, 0, 0, price);
     }
 
     public Book(String titles, String authors, String type, double price) {
-        this(titles, authors, "", 0, 0, price);
+        this(titles, authors, null, 0, 0, price);
     }
 
     public Book(String titles, String authors, int publicationYear) {
-        this(titles, authors, "", publicationYear, 0, "", 0.0);
+        this(titles, authors, null, publicationYear, 0, null, 0.0);
     }
 
     public Book(String titles, String authors, int pages, double price) {
-        this(titles, authors, "", 0, pages, "", price);
+        this(titles, authors, null, 0, pages, null, price);
     }
 
     public Book(String titles, String authors, String type) {
-        this(titles, authors, "", 0, 0, type, 0.0);
+        this(titles, authors, null, 0, 0, type, 0.0);
     }
 
 

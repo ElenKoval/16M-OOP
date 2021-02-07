@@ -8,7 +8,7 @@ public class Main {
         Book cookingBook = new Book("100 Cookies", "Sarah Kieffer", "97814521",
                 2020, 304, "cooking", 25.30);
         Book warandpeace = new Book("War and Peace", "Leo Tolstoy",
-                "9780143039990", 2006, 1424, 21.99);
+                "9780143039990", 2006, 1424, "Classic",21.99);
         Book foundation = new Book("Foundation", "Asimov", 17.99);
         Book dune = new Book("Children of Dune", "Frank Herbert",
                 " Science Fiction", 18.99);
