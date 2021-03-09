@@ -59,8 +59,6 @@ public class Book {
     public void setTitle(String title) {
         if ((title != null && !title.trim().isEmpty())) {
             this.title = title;
-        } else {
-            this.author = "Incorrect! Please,check spelling";
         }
     }
 
@@ -81,8 +79,6 @@ public class Book {
     public void setPricePerPage(double pricePerPage) {
         if (pricePerPage > 0) {
             this.pricePerPage = pricePerPage;
-        } else {
-            this.author = "Incorrect! Please,check spelling";
         }
     }
 

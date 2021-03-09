@@ -19,9 +19,11 @@ public class BooksAppl {
     public static void getTotalPrice(Book[] ar) {
         double sumPrice = 0;
         for (int i = 0; i < ar.length; i++) {
-            sumPrice = (double)Math.round((ar[i].getPage() * ar[i].getPricePerPage())*100)/100;
+//            sumPrice = (double)Math.round((ar[i].getPage() * ar[i].getPricePerPage())*100)/100;
+            sumPrice = ar[i].getPage() * ar[i].getPricePerPage();
         }
-        System.out.println("Total sum = " + sumPrice);
+//        System.out.println("Total sum = " +sumPrice);
+        System.out.printf("Total sum =  %.2f", sumPrice);
     }
 
 
