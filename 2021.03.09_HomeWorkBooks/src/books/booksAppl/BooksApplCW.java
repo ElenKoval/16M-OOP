@@ -4,6 +4,7 @@ import books.booksData.Book;
 
 public class BooksAppl {
     public static void main(String[] args) {
+//        Book [] books = new Book[] {}
         Book foundation = new Book(2344322, "Asim0v", " Foundation", 289, 0.34);
         Book dune = new Book(5677653, "Herbert", "Children of Dune", 345, 0.89);
         Book cookingBook = new Book(4566535, "Kieffer", "100 Cookies", 304, 0.18);
@@ -20,7 +21,7 @@ public class BooksAppl {
         double sumPrice = 0;
         for (int i = 0; i < ar.length; i++) {
 //            sumPrice = (double)Math.round((ar[i].getPage() * ar[i].getPricePerPage())*100)/100;
-            sumPrice = ar[i].getPage() * ar[i].getPricePerPage();
+            sumPrice += ar[i].getPage() * ar[i].getPricePerPage();
         }
 //        System.out.println("Total sum = " +sumPrice);
         System.out.printf("Total sum =  %.2f", sumPrice);
