@@ -36,6 +36,18 @@ public class Manager extends Employee {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Manager)) return false;
+        if (!super.equals(o)) return false;
+
+        Manager manager = (Manager) o;
+
+        return getGrade() == manager.getGrade();
+    }
+
+
+    @Override
     public double callSalary() {
         return baseSalary * grade;
     }

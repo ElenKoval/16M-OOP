@@ -46,4 +46,17 @@ public abstract class Person {
                 ", age=" + age +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Person)) return false;
+
+        Person person = (Person) o;
+
+        if (getId() != person.getId()) return false;
+        if (getAge() != person.getAge()) return false;
+        return getName() != null ? getName().equals(person.getName()) : person.getName() == null;
+    }
+
 }

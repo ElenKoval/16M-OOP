@@ -47,6 +47,19 @@ public class SalesMan extends Employee {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof SalesMan)) return false;
+        if (!super.equals(o)) return false;
+
+        SalesMan salesMan = (SalesMan) o;
+
+        if (Double.compare(salesMan.getTotalSales(), getTotalSales()) != 0) return false;
+        return getBonus() == salesMan.getBonus();
+    }
+
+
+    @Override
     public double callSalary() {
         return baseSalary + totalSales * (bonus / 100);
     }

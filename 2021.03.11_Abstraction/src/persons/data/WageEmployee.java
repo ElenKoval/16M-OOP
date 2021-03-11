@@ -43,6 +43,19 @@ public class WageEmployee extends Employee {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof WageEmployee)) return false;
+        if (!super.equals(o)) return false;
+
+        WageEmployee that = (WageEmployee) o;
+
+        if (getHours() != that.getHours()) return false;
+        return Double.compare(that.getWage(), getWage()) == 0;
+    }
+
+
+    @Override
     public double callSalary() {
         return hours * wage;
     }
